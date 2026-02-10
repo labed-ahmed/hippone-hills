@@ -1,0 +1,212 @@
+/* Custom styles for Hippone Hills website */
+html {
+  scroll-behavior: smooth;
+}
+
+.logo-wrapper {
+  width: 56px;          /* navbar-friendly size */
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;     /* 🔑 this hides the square */
+  background: black;    /* same as navbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* keeps circle centered */
+}
+
+/* Material Symbols Outlined */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Main Hero Section Styles */
+.main-hero {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-gradient-overlay {
+    background: linear-gradient(90deg, rgba(10, 10, 10, 0.8) 0%, rgba(10, 10, 10, 0.2) 100%);
+}
+
+.hero-content h1 {
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation enhancements */
+header nav a:hover {
+    color: #D4AF37;
+    border-bottom: 2px solid #D4AF37;
+    padding-bottom: 4px;
+}
+
+/* Fixed header styles */
+header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo styles */
+.logo-container {
+    transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+    transform: scale(1.05);
+}
+
+/* Spacer for fixed header */
+body {
+    padding-top: 64px; /* Account for fixed header height */
+}
+
+/* Hero section enhancements */
+.hero-overlay {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+/* Property photo placeholders */
+.property-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.property-image-placeholder {
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.property-image-placeholder:hover {
+    background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+}
+
+/* Contact form enhancements */
+.contact-form {
+    background: #f9f9f7;
+    border: 1px solid #e5e7eb;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #137fec;
+    box-shadow: 0 0 0 3px rgba(19, 127, 236, 0.1);
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+    
+    .property-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Dark mode enhancements */
+@media (prefers-color-scheme: dark) {
+    .property-image-placeholder {
+        background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+        color: #9ca3af;
+    }
+    
+    .property-image-placeholder:hover {
+        background: linear-gradient(135deg, #4b5563 0%, #374151 100%);
+    }
+    
+    .contact-form {
+        background: #1f2937;
+        border-color: #374151;
+    }
+}
+
+/* Animation for property cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.property-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Focus styles for accessibility */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: 2px solid #137fec;
+    outline-offset: 2px;
+}
+
+/* Custom scrollbar for better UX */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
