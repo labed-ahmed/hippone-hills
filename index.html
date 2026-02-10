@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Hippone Hills - Sophisticated Living</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/Hippone_Hills/images/logo42px.png">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <!-- Material Symbols Outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#D4AF37", // Gold color
+                        "accent-green": "#4a6741",
+                        "beige-light": "#F9F7F2", // Cream/Sand background
+                        "background-light": "#F9F7F2",
+                        "background-dark": "#1a1a1a", // Rich black
+                        "accent-light": "#E5DACE", // Soft decorative
+                        "accent-dark": "#1A1A1A", // Dark accent
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#111418] dark:text-white antialiased">
+    <!-- Main Hero Section with New Image -->
+
+
+    <section id="home" class="relative min-h-screen bg-cover bg-center bg-no-repeat main-hero" style="background-image: url('/Hippone_Hills/images/building.jpg');">
+
+        <div class="absolute inset-0 hero-gradient-overlay">
+
+            
+            <div class="max-w-[1200px] mx-auto px-6 h-full flex flex-col justify-center">
+                <div class="max-w-2xl">
+                    <h1 class="text-5xl md:text-7xl font-black text-white mb-6 leading-tight hero-content">
+                        Welcome to <span class="text-primary">Hippone Hills</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed hero-content">
+                        Experience luxury living in the most exclusive residential community. 
+                        Where sophistication meets comfort in every detail.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#properties">
+                            <button class="bg-primary text-white text-base md:text-lg font-bold px-8 py-4 rounded-lg hover:bg-primary/90 transition-all transform hover:scale-105 shadow-lg">
+                                Explore Our Properties
+                                <span class="ml-2 material-symbols-outlined text-sm">arrow_forward</span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 w-full border-b border-solid border-[#f0f2f4] dark:border-[#1e293b] bg-white/90 dark:bg-background-dark/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <!-- Logo Placeholder - Replace with your actual logo -->
+                <div class="logo-wrapper"">
+                    <img src="/Hippone_Hills/images/Untitled design(1).png" alt="Hippone Hills Logo" class="w-full h-full object-cover rounded-lg"
+                    alt="Hippone Hills Logo" 
+                    class="w-full h-full object-cover rounded-lg scale-125">
+                    
+                   
+                </div>
+                <h1 class="text-xl font-bold tracking-tight">Hippone Hills</h1>
+            </div>
+            <nav class="hidden md:flex items-center gap-10">
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#home">Home</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#about">About Us</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#properties">Properties</a>
+            </nav>
+            <div class="md:hidden flex items-center gap-4">
+                <button id="mobileMenuButton" class="text-[#111418] dark:text-white">
+                    <span class="material-symbols-outlined text-2xl">menu</span>
+                </button>
+            </div>
+            <a href="#contactUs">
+               <button class="bg-primary text-white text-sm font-bold px-5 py-2.5 rounded-lg hover:bg-primary/90 transition-all hidden md:block">
+                  Contact Us
+               </button>
+            </a>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden fixed inset-0 bg-white dark:bg-background-dark z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+            <div class="flex flex-col items-center justify-center h-full space-y-8">
+                <button id="closeMobileMenu" class="absolute top-6 right-6 text-[#111418] dark:text-white">
+                    <span class="material-symbols-outlined text-3xl">close</span>
+                </button>
+                <a href="#home" class="text-2xl font-bold text-[#111418] dark:text-white hover:text-primary transition-colors">Home</a>
+                <a href="#about" class="text-2xl font-bold text-[#111418] dark:text-white hover:text-primary transition-colors">About Us</a>
+                <a href="#properties" class="text-2xl font-bold text-[#111418] dark:text-white hover:text-primary transition-colors">Properties</a>
+                <a href="#contactUs" class="bg-primary text-white text-lg font-bold px-8 py-3 rounded-lg hover:bg-primary/90 transition-all mt-4">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- About Us Section -->
+    <section id="about" class="pt-10 pb-24 bg-white dark:bg-background-dark px-6">
+        <div class="max-w-[1200px] mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-primary font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Our Story</span>
+                    <h2 class="text-4xl md:text-5xl font-black text-[#111418] dark:text-white mb-8 leading-tight">
+                        Crafting Excellence in Real Estate
+                    </h2>
+                    <p class="text-lg text-[#617589] dark:text-gray-400 mb-8 leading-relaxed">
+                        Since our founding, Hippone Hills has been synonymous with luxury, quality, and unparalleled service. 
+                        We don't just sell properties—we create legacies and transform dreams into reality.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                                <span class="material-symbols-outlined">diamond</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2">Uncompromising Quality</h3>
+                                <p class="text-[#617589] dark:text-gray-400">Every property in our portfolio meets the highest standards of craftsmanship and design.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                                <span class="material-symbols-outlined">location_on</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2">Prime Locations</h3>
+                                <p class="text-[#617589] dark:text-gray-400">We specialize in the most sought-after neighborhoods and exclusive communities.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                                <span class="material-symbols-outlined">group</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2">Personalized Service</h3>
+                                <p class="text-[#617589] dark:text-gray-400">Our dedicated team provides white-glove service tailored to your unique needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-3 gap-8 mt-12">
+                        <div class="text-center">
+                            <div class="text-3xl font-black text-primary mb-2">25+</div>
+                            <div class="text-sm text-[#617589] dark:text-gray-400">Years of Excellence</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-black text-primary mb-2">500+</div>
+                            <div class="text-sm text-[#617589] dark:text-gray-400">Happy Clients</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-black text-primary mb-2">$2B+</div>
+                            <div class="text-sm text-[#617589] dark:text-gray-400">Properties Sold</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="aspect-square bg-gradient-to-br from-gray-200 to-gray-400 dark:from-gray-700 dark:to-gray-900 rounded-2xl overflow-hidden shadow-lg">
+                            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1560184897-6a0e5bd901d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h4 class="font-bold">Luxury Living</h4>
+                                <p class="text-sm opacity-90">Since 1999</p>
+                            </div>
+                        </div>
+                        
+                        <div class="aspect-square bg-gradient-to-br from-gray-200 to-gray-400 dark:from-gray-700 dark:to-gray-900 rounded-2xl overflow-hidden shadow-lg">
+                            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h4 class="font-bold">Expert Team</h4>
+                                <p class="text-sm opacity-90">150+ Agents</p>
+                            </div>
+                        </div>
+                        
+                        <div class="aspect-square bg-gradient-to-br from-gray-200 to-gray-400 dark:from-gray-700 dark:to-gray-900 rounded-2xl overflow-hidden shadow-lg">
+                            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1529157517509-01484f1360e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h4 class="font-bold">Global Reach</h4>
+                                <p class="text-sm opacity-90">30+ Countries</p>
+                            </div>
+                        </div>
+                        
+                        <div class="aspect-square bg-gradient-to-br from-gray-200 to-gray-400 dark:from-gray-700 dark:to-gray-900 rounded-2xl overflow-hidden shadow-lg">
+                            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1560184897-6a0e5bd901d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h4 class="font-bold">Trusted Partner</h4>
+                                <p class="text-sm opacity-90">Award Winning</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Decorative elements -->
+                    <div class="absolute -top-4 -right-4 w-24 h-24 bg-primary/10 rounded-full"></div>
+                    <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/5 rounded-full"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Photos Section -->
+    <section id="properties" class="py-24 bg-beige-light dark:bg-background-dark px-6">
+        <div class="max-w-[1200px] mx-auto">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold tracking-tight mb-2">Our Properties</h2>
+                    <p class="text-[#617589] dark:text-gray-400">Discover our exclusive collection of premium properties.</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Property Photo Placeholder 1 -->
+                <div class="group bg-white dark:bg-background-dark rounded-xl overflow-hidden border border-[#f0f2f4] dark:border-[#1e293b] shadow-sm hover:shadow-md transition-shadow">
+                    <div class="aspect-[16/10] overflow-hidden relative">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA5AV_pyEcNH0ZKMYkjVga3hPcvRhT9UJjYjWRmvKbxl8X9O5m9vL-IgNJnsh7mYqiCUrDkwsKYgVf4Mrij7u41TMC2F8RmVXgP91RBMwm9sWdywYvcpftbNAScz6okBmSkkJ6MRnrGYOOuxnb9_gRD9L3htcrVyJrtYgh-XfUJQNWVTjB_C2BsI-3Nl0XCfdXu95f2YATj7hbAEBAgOT5zLyzuzQpRE9ldTcwv5hUVA_T3WlWXCwF-qJXj2PhfTnjD5JR3VH8TQiNe');">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Luxury Villa</h3>
+                        </div>
+                        <p class="text-[#111418] dark:text-white font-medium mb-1">Palm Beach, FL</p>
+                        <p class="text-[#617589] text-sm mb-4">5 Bedrooms • 6 Bathrooms • 8,500 sqft</p>
+                    </div>
+                </div>
+
+                <!-- Property Photo Placeholder 2 -->
+                <div class="group bg-white dark:bg-background-dark rounded-xl overflow-hidden border border-[#f0f2f4] dark:border-[#1e293b] shadow-sm hover:shadow-md transition-shadow">
+                    <div class="aspect-[16/10] overflow-hidden relative">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA3b1lNLZ31rVnK02S3DcaIDpT3ib3lq50t31U9LjwcuBWaFhZ6eovrq1u_HIXidxJKoW-tgP4a1vULkY9dkiRa7VNQXpqAwprEhyrUccCk69_8EPqcSZrY0n1-BAFIyAiQ2ekSbB3udcAQ_yfsebNYP2_g8c74Yc0RRj-h_UY7bQOoEOGeG58txfheN54Qzqc1-cdBQIS3ErJ-a06sQBzN8djcWzqIJRj7M1A4ky7bg3lScvU54_b6-5w_rTlGX5nXHjIhkov7FwEn');">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Modern Penthouse</h3>
+                        </div>
+                        <p class="text-[#111418] dark:text-white font-medium mb-1">Manhattan, NY</p>
+                        <p class="text-[#617589] text-sm mb-4">3 Bedrooms • 4 Bathrooms • 3,200 sqft</p>
+                    </div>
+                </div>
+
+                <!-- Property Photo Placeholder 3 -->
+                <div class="group bg-white dark:bg-background-dark rounded-xl overflow-hidden border border-[#f0f2f4] dark:border-[#1e293b] shadow-sm hover:shadow-md transition-shadow">
+                    <div class="aspect-[16/10] overflow-hidden relative">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBoNOBO4XKq3enELbOFV-LeVZL3aD3Hgtjmai4Y-8z5tm5TWcJwyxTZr38mRC4wDldlhG0Qrs3Vvd0y11785BsNQ-7SbPohuAN2qxB3fS6DYdL6eT2c46aAs0eTxRQFFkDZ0TwhRVe6rDi9cCwUxRv212rM2Gz4Db-LUTDRaw_NUub86CHwQoSO_J1A4if-DFNANR3FUfgDT91VaUYqDGHl2ZAfbfIVjwJ1GB7oaOf2OHjlePE2LnWQgemJu8GDkdsbw8d-xm7xLhyM');">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Mountain Retreat</h3>
+                        </div>
+                        <p class="text-[#111418] dark:text-white font-medium mb-1">Aspen, CO</p>
+                        <p class="text-[#617589] text-sm mb-4">4 Bedrooms • 5 Bathrooms • 6,800 sqft</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contactUs" class="py-24 bg-white dark:bg-background-dark px-6">
+        <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-20">
+            <div>
+                <h2 class="text-4xl font-black mb-6">Let's Connect</h2>
+                <p class="text-[#617589] text-lg mb-10 max-w-md">
+                    Our experts are ready to assist you in finding your next masterpiece of living. Request a private callback today.
+                </p>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined">call</span>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-[#617589]">Call Us</p>
+                            <p class="text-lg font-bold">+1 (555) 800-elite</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined">mail</span>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-[#617589]">Email</p>
+                            <p class="text-lg font-bold">private@hipponehills.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined">location_on</span>
+                        </div>
+                        <div data-location="New York, USA" style="">
+                            <p class="text-sm font-medium text-[#617589]">Headquarters</p>
+                            <p class="text-lg font-bold">5th Avenue, Manhattan, NY</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-beige-light dark:bg-background-dark/80 p-10 rounded-2xl border border-[#f0f2f4] dark:border-[#1e293b]">
+                <form id="contactForm" class="space-y-6">
+                    <!-- Personal Information Section -->
+                    <div class="border-b border-primary/20 pb-6">
+                        <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-4">Personal Information</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="flex flex-col gap-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-[#617589]">First Name</label>
+                                <input class="bg-white dark:bg-background-dark border-[#dbe0e6] dark:border-gray-700 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary" placeholder="John" type="text" name="firstName" required/>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-[#617589]">Last Name</label>
+                                <input class="bg-white dark:bg-background-dark border-[#dbe0e6] dark:border-gray-700 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary" placeholder="Doe" type="text" name="lastName" required/>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                            <div class="flex flex-col gap-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-[#617589]">Phone Number</label>
+                                <input class="bg-white dark:bg-background-dark border-[#dbe0e6] dark:border-gray-700 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary" placeholder="+1 (555) 123-4567" type="tel" name="phone" required/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Apartment Details Section -->
+                    <div class="border-b border-primary/20 pb-6">
+                        <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-4">Apartment Details</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="flex flex-col gap-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-[#617589]">Apartment Number</label>
+                                <input class="bg-white dark:bg-background-dark border-[#dbe0e6] dark:border-gray-700 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary" placeholder="A-101" type="text" name="apartmentNumber"/>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-[#617589]">Superficie</label>
+                                <select class="bg-white dark:bg-background-dark border-[#dbe0e6] dark:border-gray-700 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary" name="superficie">
+                                    <option value="">Select superficie</option>
+                                    <option value="F3">F3</option>
+                                    <option value="F4">F4</option>
+                                    <option value="F5">F5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                            <div class="flex flex-col gap-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-[#617589]">Floor (Étage)</label>
+                                <select class="bg-white dark:bg-background-dark border-[#dbe0e6] dark:border-gray-700 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary" name="floor">
+                                    <option value="">Select floor</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                </select>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-[#617589]">Block</label>
+                                <select class="bg-white dark:bg-background-dark border-[#dbe0e6] dark:border-gray-700 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary" name="block">
+                                    <option value="">Select block</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Financial Information Section -->
+                    <div class="border-b border-primary/20 pb-6">
+                        <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-4">Financial Information</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="flex flex-col gap-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-[#617589]">Apartment Price</label>
+                                <input class="bg-white dark:bg-background-dark border-[#dbe0e6] dark:border-gray-700 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary" placeholder="1,500,000" type="number" name="apartmentPrice" step="0.01"/>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-[#617589]">Date de Versement</label>
+                                <input class="bg-white dark:bg-background-dark border-[#dbe0e6] dark:border-gray-700 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary" type="date" name="paymentDate"/>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                            <div class="flex flex-col gap-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-[#617589]">Montant de Versement</label>
+                                <input class="bg-white dark:bg-background-dark border-[#dbe0e6] dark:border-gray-700 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary" placeholder="50,000" type="number" name="paymentAmount" step="0.01"/>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-[#617589]">Reste à Payer</label>
+                                <input class="bg-white dark:bg-background-dark border-[#dbe0e6] dark:border-gray-700 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary" placeholder="1,450,000" type="number" name="remainingAmount" step="0.01"/>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                            <div class="flex flex-col gap-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-[#617589]">Total des Versements</label>
+                                <input class="bg-white dark:bg-background-dark border-[#dbe0e6] dark:border-gray-700 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary" placeholder="50,000" type="number" name="totalPayments" step="0.01"/>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-[#617589]">Total Restant</label>
+                                <input class="bg-white dark:bg-background-dark border-[#dbe0e6] dark:border-gray-700 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary" placeholder="1,450,000" type="number" name="totalRemaining" step="0.01"/>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-2 mt-4">
+                            <label class="text-xs font-bold uppercase tracking-wider text-[#617589]">Total</label>
+                            <input class="bg-white dark:bg-background-dark border-[#dbe0e6] dark:border-gray-700 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary" placeholder="1,500,000" type="number" name="total" step="0.01"/>
+                        </div>
+                    </div>
+
+                    <!-- Additional Information -->
+                    <div class="flex flex-col gap-2">
+                        <label class="text-xs font-bold uppercase tracking-wider text-[#617589]">Additional Notes</label>
+                        <textarea class="bg-white dark:bg-background-dark border-[#dbe0e6] dark:border-gray-700 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary" placeholder="Any additional information about your apartment or payment..." rows="3" name="message"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-primary text-white font-bold py-4 rounded-lg mt-4 hover:bg-primary/90 transition-all transform hover:scale-105 shadow-lg">
+                        Submit Apartment Information
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-background-dark text-white py-12 px-6">
+        <div class="max-w-[1200px] mx-auto border-t border-white/10 pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-2 opacity-80">
+                <div class="size-6">
+                    <svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.8261 17.4264C16.7203 18.1174 20.2244 18.5217 24 18.5217C27.7756 18.5217 31.2797 18.1174 34.1739 17.4264C36.9144 16.7722 39.9967 15.2331 41.3563 14.1648L24.8486 40.6391C24.4571 41.267 23.5429 41.267 23.1514 40.6391L6.64374 14.1648C8.00331 15.2331 11.0856 16.7722 13.8261 17.4264Z" fill="white"></path>
+                    </svg>
+                </div>
+                <h2 class="text-lg font-bold">Hippone Hills</h2>
+            </div>
+            <div class="flex gap-8 text-sm text-gray-400">
+                <a class="hover:text-white" href="#">Privacy Policy</a>
+                <a class="hover:text-white" href="#">Terms of Service</a>
+                <a class="hover:text-white" href="#">License Info</a>
+            </div>
+            <p class="text-sm text-gray-500">© 2024 Hippone Hills. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobileMenuButton');
+            const closeMobileMenu = document.getElementById('closeMobileMenu');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.remove('translate-x-full');
+            });
+            
+            closeMobileMenu.addEventListener('click', function() {
+                mobileMenu.classList.add('translate-x-full');
+            });
+            
+            // Close menu when clicking on a link
+            const menuLinks = mobileMenu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('translate-x-full');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
